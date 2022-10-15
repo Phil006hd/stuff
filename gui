@@ -1,0 +1,133 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zachisfunny/Boo-Lib/main/UI%20code"))()
+local tab1 = library:AddTab("SELF OPTIONS");
+local tab2 = library:AddTab("GAMES");
+local tab3 = library:AddTab("CREDITS");
+
+
+tab1:AddSlider({
+    Text    = "walkspeed";
+    Min     = 16;
+    Max     = 100;
+    Def     = 16;
+    Callback = function(value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+    end;
+});
+
+
+
+tab1:AddTextbox({
+    Text        = "type walkspeed here";
+    Callback    = function(value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+    end;
+    StartText   = "textbox";
+});
+
+tab1:AddDropdown({
+    Text = "Self Options";
+    Callback = function(value)
+if (value == "jumppower") then
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+end
+if (value == "walkspeed (120)") then
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+end
+if (value == "fly") then
+    local FlyingKey = Enum.KeyCode.B
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/zachisfunny/Fly-Script/main/Script'))()
+end
+    end;
+    Options = {
+        "jumppower";
+        "walkspeed";
+        "fly";
+    };
+});
+
+
+
+tab3:AddButton({
+    Text    = "MADE BY CRY#9161| HXT_9 GUI";
+    Callback = function()
+        print();
+    end;
+});
+
+tab3:AddButton({
+    Text    = "PAYED MOD MENU";
+    Callback = function()
+        print();
+    end;
+});
+
+tab3:AddButton({
+    Text    = "GUI VERSION (b0.6)";
+    Callback = function()
+        print();
+    end;
+});
+
+tab3:AddButton({
+    Text    = "Latest Updates:";
+    Callback = function()
+        print();
+    end;
+});
+
+tab3:AddButton({
+    Text    = "-added game (Greenville)";
+    Callback = function()
+        print();
+    end;
+});
+
+tab3:AddButton({
+    Text    = "-added game (Lucky Blocks Battleground)";
+    Callback = function()
+        print();
+    end;
+});
+
+tab3:AddButton({
+    Text    = "-added more Self options";
+    Callback = function()
+        print();
+    end;
+});
+
+
+tab2:AddButton({
+    Text    = "DRIVING EMPIRE";
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Phil006hd/stuff/main/Driving%20Empire'))()
+    end;
+});
+
+tab2:AddButton({
+    Text    = "JAILBREAK";
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Phil006hd/stuff/main/jailbreak'))()
+    end;
+});
+
+tab2:AddButton({
+    Text    = "LUCKY BLOCKS BATTLEGROUND";
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Phil006hd/stuff/main/Lucky%20Blocks%20Battleground'))()
+    end;
+});
+
+tab2:AddButton({
+    Text    = "GREENVILLE";
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Phil006hd/stuff/main/Greenville'))()
+    end;
+});
+
+tab2:AddButton({
+    Text    = "";
+    Callback = function()
+        loadstring(game:HttpGet(''))()
+    end;
+});
